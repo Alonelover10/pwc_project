@@ -62,7 +62,7 @@ CORS(flask_app)
 app = Api(app=flask_app,version="1.0",title="Multi-threaded scraping utility",description="Scrape data from URL")
 name_space = app.namespace('scraper', description='Scraping APIs')
 model = app.model('Scraping params',{'url': fields.String(required=True,description="URL for scraping",help="URL cannot be left blank"),})
-flask_app.run()
+
 @name_space.route("/")
 class MainClass(Resource):
     def options(self):
